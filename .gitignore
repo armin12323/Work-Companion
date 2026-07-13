@@ -3,4 +3,4 @@
 /d1-worker/.vscode
 /d1-worker/.wrangler
 /my-react-app/node_modules
-.env
+/my-react-app/.env
