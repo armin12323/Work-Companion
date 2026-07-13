@@ -2,4 +2,5 @@
 /d1-worker/node_modules
 /d1-worker/.vscode
 /d1-worker/.wrangler
-/my-react-app/node_modulesnode_modules/
+/my-react-app/node_modules
+/my-react-app/.env
