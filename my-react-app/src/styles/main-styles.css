@@ -1,0 +1,165 @@
+.no-bullet-pts {
+    list-style: none;
+}
+
+.note-date {
+    font-size: 10px;
+}
+
+.note {
+    outline-style: double;
+    color: green;
+}
+
+.note:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+.done {
+    text-decoration: line-through;
+    color: red;
+}
+
+.quote-form {
+    margin: auto;
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.notes-box {
+    order: 1;
+    flex-grow: 0;
+    margin: 10px;
+    outline-style: double;
+    color: green;
+    padding: 5px;
+    background: #ffffffd6;
+}
+
+.notes-config-box {
+    order: 2;
+    flex-grow: 2;
+    margin: 10px;
+    outline-style: double;
+    color: green;
+    padding: 5px;
+    background: #ffffffd6;
+}
+
+.meetings-box {
+    order: 3;
+    flex-grow: 2;
+    margin: 10px;
+    outline-style: double;
+    color: green;
+    padding: 5px;
+    background: #ffffffd6;
+}
+
+.notes-title {
+    order: 1;
+    flex-grow: 0;
+    margin: 10px;
+    outline-style: double;
+    color: green;
+    padding: 5px;
+    background: #ffffffd6;
+}
+
+.notes-delete {
+    order: 2;
+    flex-grow: 2;
+    margin: 10px;
+    outline-style: double;
+    color: green;
+    padding: 5px;
+    background: #ffffffd6;
+}
+
+.li-item {
+    border-style: solid;
+}
+
+.title-div {
+    order: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.timestamp-div {
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.dueDate-div {
+    order: 3;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.gradient-outline {
+  /* background: linear-gradient(rgb(178, 255, 175), white) padding-box,
+              linear-gradient(to right, rgb(7, 195, 42), rgb(27, 92, 61)) border-box; */
+  border-radius: 50em;
+  /* border: 2px solid transparent; */
+  width: fit-content;
+}
+
+.gradient-outline-no-bg {
+  background: linear-gradient(rgb(178, 255, 175), white) padding-box,
+              linear-gradient(to right, rgb(7, 195, 42), rgb(27, 92, 61)) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+  width: fit-content;
+}
+
+.title-div {
+    justify-items: center;
+    margin-bottom: 5px;
+}
+
+.page-color {
+    color: gray;
+}
+
+.textarea-style {
+    width: 100%;
+    box-sizing: border-box; /* Includes padding and border in width */
+    height: 200px; 
+    field-sizing: content;
+}
+
+.login-box {
+    top: 25%;
+    left: 42.5%;
+    position: absolute;
+    outline-style: double;
+    width: 300px;
+    height: 300px;
+}
+
+.center-of-screen {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.delete-note-button {
+    background-color: #ffffff38;
+    outline-style: auto;
+    margin-left: 5px;
+    cursor: default;
+}
+
+.delete-note-button:hover {
+    background-color: rgb(137, 137, 137);
+}
+

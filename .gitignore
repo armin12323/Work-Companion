@@ -1,0 +1,5 @@
+/node_modules
+/d1-worker/node_modules
+/d1-worker/.vscode
+/d1-worker/.wrangler
+/my-react-app/node_modulesnode_modules/
