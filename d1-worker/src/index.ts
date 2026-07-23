@@ -16,6 +16,7 @@ import { stringify } from "node:querystring";
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		console.log('request method: ', request.method)
 
 		const corsHeaders = {
 			'Access-Control-Allow-Origin': '*', // Replace '*' with your specific domain for better security
@@ -30,6 +31,13 @@ export default {
 				headers: corsHeaders,
 			});
 		}
+
+		// if (request.method === 'DELETE') {
+		// 	return new Response(null, {
+		// 		status: 204,
+		// 		headers: corsHeaders,
+		// 	});
+		// }
 
 		const { pathname } = new URL(request.url);
 
@@ -101,6 +109,7 @@ export default {
 		}
 
 		if (request.method == 'DELETE') { 
+			console.log('WE ARE HITTING DELETE')
 			if (pathname === "/api/notes/delete") { 
 				const data = await request.json()
 
@@ -111,7 +120,15 @@ export default {
 				const user_id_query = await env.d1_worker.prepare("select id from users1 where clerk_id = ? ").bind(clerk_id).all()
 				const user_id = user_id_query.results[0].id
 
-				const update_note = await env.d1_worker.prepare("delete from notes1 where user_id = ?").bind(user_id).run()
+				const update_note = await env.d1_worker.prepare("delete from notes1 where user_id = ? and id = ?").bind(user_id, data.id).run()
+
+				return new Response('Note Deleted', {
+					status: 200,
+					headers: {
+						"Content-Type": "application/json",
+						"Access-Control-Allow-Origin": '*', // Authorizes your React app
+					}
+				});
 
 
 			}
